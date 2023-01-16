@@ -1,0 +1,21 @@
+stages:
+  - test
+  - deploy
+
+unit-test-job:
+  stage: test
+  tags:
+    - "honnet"
+  script:
+    - echo "Running unit tests..."
+    - mvn test
+
+deploy-job:
+  stage: deploy
+  image: maven:3.6-jdk-11
+  tags:
+    - "honnet"
+  script:
+    - 'mvn deploy -s ci_settings.xml'
+  only:
+    - main
