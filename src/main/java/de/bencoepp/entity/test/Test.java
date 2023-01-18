@@ -7,6 +7,9 @@ public class Test {
     private String title;
     @JsonProperty("description")
     private String description;
+
+    @JsonProperty("subTitle")
+    private String subTitle;
     @JsonProperty("executor")
     private String executor;
     @JsonProperty("runtime")
@@ -14,11 +17,17 @@ public class Test {
     @JsonProperty("type")
     private String type;
 
-    private static String TYPE_SYSTEM = "system";
-    private static String TYPE_DOCKER = "docker";
+    public static String TYPE_SYSTEM = "system";
+    public static String TYPE_DOCKER = "docker";
 
     @JsonProperty("param")
     private String param;
+    @JsonProperty("depth")
+    private String depth;
+
+    public static String DEPTH_SIMPLE = "simple";
+    public static String DEPTH_NORMAL = "normal";
+    public static String DEPTH_FULL = "full";
 
     public String getDescription() {
         return description;
@@ -66,5 +75,21 @@ public class Test {
 
     public void setParam(String param) {
         this.param = param;
+    }
+
+    public String getSubTitle() {
+        return subTitle;
+    }
+
+    public void setSubTitle(String subTitle) {
+        this.subTitle = subTitle;
+    }
+
+    public String getDepth() {
+        return depth;
+    }
+
+    public void setDepth(String depth) {
+        this.depth = depth;
     }
 }
