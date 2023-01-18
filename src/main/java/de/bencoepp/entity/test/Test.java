@@ -13,6 +13,10 @@ public class Test {
     private Long runtime;
     @JsonProperty("runtime")
     private String type;
+
+    private static String TYPE_SYSTEM = "system";
+    private static String TYPE_DOCKER = "docker";
+
     @JsonProperty("param")
     private String param;
 
