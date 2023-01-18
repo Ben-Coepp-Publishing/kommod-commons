@@ -12,9 +12,8 @@ public class Check {
     @JsonProperty("ok")
     private Boolean ok;
 
-    public Check(){
+    public Check(){}
 
-    }
     public Check(String title, String description, String command, Boolean ok) {
         this.title = title;
         this.description = description;
