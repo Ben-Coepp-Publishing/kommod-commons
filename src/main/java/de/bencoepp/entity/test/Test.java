@@ -11,7 +11,7 @@ public class Test {
     private String executor;
     @JsonProperty("runtime")
     private Long runtime;
-    @JsonProperty("runtime")
+    @JsonProperty("type")
     private String type;
 
     private static String TYPE_SYSTEM = "system";
