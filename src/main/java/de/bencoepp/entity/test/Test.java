@@ -2,15 +2,19 @@ package de.bencoepp.entity.test;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-
 public class Test {
     @JsonProperty("title")
     private String title;
     @JsonProperty("description")
     private String description;
-    @JsonProperty("stages")
-    private ArrayList<Stage> stages;
+    @JsonProperty("executor")
+    private String executor;
+    @JsonProperty("runtime")
+    private Long runtime;
+    @JsonProperty("runtime")
+    private String type;
+    @JsonProperty("param")
+    private String param;
 
     public String getDescription() {
         return description;
@@ -28,11 +32,35 @@ public class Test {
         this.title = title;
     }
 
-    public ArrayList<Stage> getStages() {
-        return stages;
+    public String getExecutor() {
+        return executor;
     }
 
-    public void setStages(ArrayList<Stage> stages) {
-        this.stages = stages;
+    public void setExecutor(String executor) {
+        this.executor = executor;
+    }
+
+    public Long getRuntime() {
+        return runtime;
+    }
+
+    public void setRuntime(Long runtime) {
+        this.runtime = runtime;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getParam() {
+        return param;
+    }
+
+    public void setParam(String param) {
+        this.param = param;
     }
 }

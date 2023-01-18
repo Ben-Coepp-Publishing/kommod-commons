@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Step {
     @JsonProperty("title")
     private String title;
-    @JsonProperty("commands")
-    private String[] commands;
+    @JsonProperty("description")
+    private String description;
+    @JsonProperty("ok")
+    private Boolean ok;
 
     public String getTitle() {
         return title;
@@ -16,11 +18,19 @@ public class Step {
         this.title = title;
     }
 
-    public String[] getCommands() {
-        return commands;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCommands(String[] commands) {
-        this.commands = commands;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Boolean getOk() {
+        return ok;
+    }
+
+    public void setOk(Boolean ok) {
+        this.ok = ok;
     }
 }
