@@ -23,11 +23,11 @@ public class Test {
     @JsonProperty("param")
     private String param;
     @JsonProperty("depth")
-    private String depth;
+    private Integer depth;
 
-    public static String DEPTH_SIMPLE = "simple";
-    public static String DEPTH_NORMAL = "normal";
-    public static String DEPTH_FULL = "full";
+    public static Integer DEPTH_SIMPLE = 1;
+    public static Integer DEPTH_NORMAL = 2;
+    public static Integer DEPTH_FULL = 3;
 
     public String getDescription() {
         return description;
@@ -85,11 +85,11 @@ public class Test {
         this.subTitle = subTitle;
     }
 
-    public String getDepth() {
+    public Integer getDepth() {
         return depth;
     }
 
-    public void setDepth(String depth) {
+    public void setDepth(Integer depth) {
         this.depth = depth;
     }
 }
