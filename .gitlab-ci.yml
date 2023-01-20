@@ -5,7 +5,7 @@ stages:
 unit-test-job:
   stage: test
   tags:
-    - "honnet"
+    - "kommod"
   script:
     - echo "Running unit tests..."
     - mvn test
@@ -15,7 +15,7 @@ deploy-job:
   stage: deploy
   image: maven:3.6-jdk-11
   tags:
-    - "honnet"
+    - "kommod"
   script:
     - 'mvn deploy -s ci_settings.xml'
   only:
