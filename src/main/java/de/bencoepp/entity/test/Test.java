@@ -7,7 +7,8 @@ public class Test {
     private String title;
     @JsonProperty("description")
     private String description;
-
+    @JsonProperty("path")
+    private String path;
     @JsonProperty("subTitle")
     private String subTitle;
     @JsonProperty("executor")
@@ -83,6 +84,14 @@ public class Test {
 
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public Integer getDepth() {
